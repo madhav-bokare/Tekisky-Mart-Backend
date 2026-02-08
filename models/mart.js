@@ -6,7 +6,7 @@ const MartSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      index: true,          
+      index: true,
       trim: true,
     },
 
@@ -19,7 +19,7 @@ const MartSchema = new mongoose.Schema(
       type: String,
       required: true,
       lowercase: true,
-      index: true,          
+      index: true,
     },
 
     content: {
@@ -30,17 +30,22 @@ const MartSchema = new mongoose.Schema(
     link: {
       type: String,
       required: true,
-      index: true,          
+      index: true,
     },
 
     price: {
       type: Number,
       default: 0,
     },
+    
+    slideBanner: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
-    versionKey: false,  
+    versionKey: false,
   }
 );
 
